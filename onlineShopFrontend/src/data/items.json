@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "name": "Book",
+      "category": "Pice",
+      "price": 10.99,
+      "availability": true,
+      "imgUrl": "/computer.jpg",
+      "description": "lepa knjiga"
+    },
+    {
+      "id": 2,
+      "name": "Computer",
+      "category": "ET",
+      "price": 1199,
+      "availability": true,
+      "imgUrl": "/computer.jpg",
+      "description": "dobar komp"
+    },
+    {
+      "id": 3,
+      "name": "Banana",
+      "category": "Voce",
+      "price": 1.05,
+      "availability": true,
+      "imgUrl": "/computer.jpg",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "name": "Milk",
+      "category": "Mlecni",
+      "price": 1.8,
+      "availability": true,
+      "imgUrl": "/computer.jpg",
+      "description": "2.8% mlecne masti"
+    },
+    {
+      "id": 5,
+      "name": "Plazma",
+      "category": "Keks",
+      "price": 3.5,
+      "availability": true,
+      "imgUrl": "",
+      "description": "Porodicno pakovanje"
+    }
+  ]

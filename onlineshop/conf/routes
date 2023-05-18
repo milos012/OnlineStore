@@ -1,0 +1,52 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+## GET ALL ROUTES
+####
+##   responses:
+##     200:
+##       schema:
+##         $ref: '#/definitions/models.Product'
+####
+GET     /api/products           controllers.ProductController.getAll
+GET     /api/users            controllers.UserController.getAll
+GET     /api/orders            controllers.OrderController.getAll
+GET     /api/products/available            controllers.ProductController.getAvailableProducts
+GET     /api/users/basic            controllers.UserController.getAllUsers
+
+GET     /api/users/:id/orders           controllers.UserController.findAllOrdersFromUser(id: Long)
+#
+#
+##GET SINGLE ITEMS ROUTES
+GET     /api/v1/users/:id        controllers.UserController.getById(id: Long)
+GET     /api/v1/products/:id        controllers.ProductController.getById(id: Long)
+GET     /api/v1/orders/:id        controllers.OrderController.getById(id: Long)
+GET     /api/v1/products/:name        controllers.ProductController.getByName(name: String)
+GET     /api/v1/users/:email        controllers.UserController.getByEmail(email: String)
+#
+##POST ROUTES
+POST    /api/v1/products            controllers.ProductController.create
+POST    /api/v1/users            controllers.UserController.create
+POST    /api/v1/orders            controllers.OrderController.create
+#
+##DELETE ROUTES
+DELETE  /api/v1/products/:id        controllers.ProductController.delete(id: Long)
+DELETE  /api/v1/users/:id        controllers.UserController.delete(id: Long)
+DELETE  /api/v1/orders/:id        controllers.OrderController.delete(id: Long)
+#
+##UPDATE ROUTES
+PUT     /api/v1/products/:id        controllers.ProductController.update(id: Long)
+PUT     /api/v1/users/:id        controllers.UserController.update(id: Long)
+PUT     /api/v1/orders/:id        controllers.OrderController.update(id: Long)
+
+#AUTH
+GET /api/ping controllers.AuthController.ping
